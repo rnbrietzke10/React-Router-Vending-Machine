@@ -11,12 +11,13 @@ const VendingMachine = ({ snacks }) => {
         <div id='snack-machine' className='img-lg'></div>
         <div className='snack-option-container'>
           {snacks.map(snack => (
-            <Link to={snack.id}>
+            <Link to={snack.id} style={{ textDecoration: 'none' }}>
               <img
                 alt={snack.snackName}
                 src={snack.img}
                 className='img-sm img-link'
               />
+              <h3>{snack.snackName}</h3>
             </Link>
           ))}
         </div>
