@@ -1,19 +1,27 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import NavBar from './NavBar';
-import Snack from './Snack';
+import { Link } from 'react-router-dom';
 
-const VendingMachine = () => {
-  const snacks = ['cookies', 'soda', 'icecream'];
+import './VendingMachine.css';
+
+const VendingMachine = ({ snacks }) => {
   return (
-    <div>
-      <NavBar />
+    <div className='wrapper'>
       <h3>Types of snacks</h3>
-      <Routes>
-        {snacks.map(snack => (
-          <Route exact path={`/${snack}`} element={<Snack snack={snack} />} />
-        ))}
-      </Routes>
+      <main className='main-container '>
+        <div id='snack-machine' className='img-lg'></div>
+        <div className='snack-option-container'>
+          {snacks.map(snack => (
+            <Link to={snack.id}>
+              <img
+                alt={snack.snackName}
+                src={snack.img}
+                className='img-sm img-link'
+              />
+            </Link>
+          ))}
+        </div>
+        <div id='soda-machine' className='img-lg'></div>
+      </main>
     </div>
   );
 };

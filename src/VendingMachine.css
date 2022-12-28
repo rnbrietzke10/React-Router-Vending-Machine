@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100%;
+  background-color: slategray;
+  color: #fff;
+  padding-top: 30px;
+  height: 95vh;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#snack-machine {
+  background: url(./images/snackMachine1.png) center no-repeat;
+  background-size: contain;
+}
+
+.img-lg {
+  height: 1000px;
+  width: 700px;
+}
+
+#soda-machine {
+  background: url(./images/snackMachine2.png) center no-repeat;
+  background-size: contain;
+}
+
+.snack-option-container {
+  margin-top: 30px;
+  display: flex;
+  width: 600px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.img-sm {
+  height: 200px;
+  margin-left: 20px;
+}
+
+.img-sm .img-link {
+  cursor: pointer;
+}

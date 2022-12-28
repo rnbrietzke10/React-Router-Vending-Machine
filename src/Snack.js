@@ -1,9 +1,16 @@
 import React from 'react';
+import './Snack.css';
 
 const Snack = ({ snack }) => {
   return (
-    <div>
-      <h1>{snack}</h1>
+    <div className='snack-container'>
+      <h2>{snack.snackName}</h2>
+      <img
+        id={snack.id}
+        className='img-md'
+        alt={snack.snackName}
+        src={snack.img}
+      />
     </div>
   );
 };
